@@ -1,7 +1,8 @@
 .tweet-form {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 30%;
+  height: 200px;
   justify-items: center;
 }
 
@@ -33,6 +34,12 @@ form div button {
   font-family: 'Bungee', cursive;
 }
 
-[::placeholder] {
-  margin-left: 200px;
+#tweet-text::placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 10px;
+  text-align: center;
+  border-bottom: 10px;
+  /* text-decoration: underline; */
 }
