@@ -1,0 +1,38 @@
+.tweet-form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-items: center;
+}
+
+form label {
+  text-decoration: underline;
+}
+
+form textarea {
+  flex-direction: column;
+  justify-self: center;
+  /* opacity: 0.1; */
+  border: none;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+form div button {
+  width: fit-content;
+  color: white;
+  background-color: steelblue;
+  font-family: 'Bungee', cursive;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+}
+
+[::placeholder] {
+  margin-left: 200px;
+}

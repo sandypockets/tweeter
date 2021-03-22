@@ -21,8 +21,29 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-nav {
-  font-family: 'Bungee', cursive;
+
+/* It should be only 90% of the width of its parent element
+It should be center aligned to the body
+It should have the same colour background as the <body> element */
+
+main {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 90%;
+  margin: auto;
+  background-color: #f4f1ec;
+}
+
+main p {
+  align-self: center;
+  width: 100%;
+}
+
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: #f4f1ec;
 }
 
 /*
