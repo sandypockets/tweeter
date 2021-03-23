@@ -36,6 +36,7 @@ form textarea {
   border-left: 0px;
   border-width: 3px;
   background-color: #f4f1ec;
+  resize: none;
 }
 
 form div {
