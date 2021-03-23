@@ -40,7 +40,7 @@ main p {
   width: 100%;
 }
 
-footer {
+.page-footer {
   height: 200px;
   width: 100%;
   background-color: #f4f1ec;
