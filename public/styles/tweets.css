@@ -1,0 +1,13 @@
+#tweets-container {
+  width: 90%;
+  margin: auto;
+}
+
+#tweets-container article {
+  display: flex;
+}
+
+.tweets-header p {
+  display: flex;
+  justify-content: space-between;
+}
