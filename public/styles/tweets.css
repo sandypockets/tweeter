@@ -1,13 +1,83 @@
 #tweets-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 90%;
   margin: auto;
 }
 
 #tweets-container article {
   display: flex;
+  flex-direction: column;
+  /* align-self: center; */
+  width: 100%;
+  margin: auto;
 }
 
-.tweets-header p {
+.tweets-header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+}
+
+/* .tewets-header p {
+  margin: 1.5em;
+} */
+
+main article p {
+  display: flex;
+  justify-content: space-around;
+}
+
+main article {
+  border: 4px solid;
+}
+
+/* .tweets-header p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
+
+.user-icon {
+  justify-content: flex-start;
+  margin: 1em;
+  width: auto;
+}
+
+.name {
+  justify-content: flex-start;
+  margin: 1em;
+}
+
+.username {
+  justify-content: flex-end;
+  margin: 1em;
+}
+
+.tweet-body {
+  width: 95%;
+  padding-top: 5px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-bottom: 3px solid;
+}
+
+.tweets-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 2em;
+}
+
+.date-stamp {
+  margin: 1em;
+  justify-content: flex-start;
+}
+
+.tweet-icon {
+  margin: 1em;
+  justify-content: flex-end;
 }
