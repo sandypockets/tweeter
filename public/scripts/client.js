@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
+/* const data = [
   {
     "user": {
       "name": "Michael Scott",
@@ -27,7 +27,7 @@ const data = [
     },
     "created_at": 1461113959088
   }
-]
+] */
 
 // Document ready
 $( document ).ready(function() {
