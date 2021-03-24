@@ -45,7 +45,7 @@ $( document ).ready(function() {
         dateStamp: tweet.created_at
       }
       console.log("61", tweetData); // Working, but only for Newton
-      return createTweetElement(tweetData);
+      createTweetElement(tweetData);
     }
   }
 
