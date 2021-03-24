@@ -15,3 +15,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Project Roadmap
+
+- Add caution icon to error messages
+- Sort tweets by date stamp, instead of just by most recently added to the array. 
+- Fix hover, to ensure username remains hidden unless hovering over that specific tweet. 
