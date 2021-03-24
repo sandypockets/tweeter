@@ -26,6 +26,26 @@ const data = [
       "text": "Je pense , donc je suis"
     },
     "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "Michael Scott",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@prisonmike" },
+    "content": {
+      "text": "You miss 100% of the shots you don't take."
+    },
+    "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "Jan Levinson",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@serenitybyjan" },
+    "content": {
+      "text": "You burn it, you buy it!"
+    },
+    "created_at": 1461113959088
   }
 ]
 
