@@ -29,14 +29,16 @@
         console.log("index.html document ready!");
         $( ".tweet-form" ).submit(function( event ) {
           event.preventDefault();
-          $(this).serialize();
           console.log($(this).serialize());
+          let serialized = $(this).serialize();
           $.ajax({
             url: "/tweets",
             type: "POST",
-            data: $(this).serialize,
+            data: serialized,
             dataType: "string"
-          });
+          })
+          .then(console.log("AJAX Successful"))
+          .catch(err => console.log(err))
         });
       })
     </script>
