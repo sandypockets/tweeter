@@ -23,6 +23,23 @@
     
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script>
+      // Form Event Handler
+      $(document).ready(function() {
+        console.log("index.html document ready!");
+        $( ".tweet-form" ).submit(function( event ) {
+          event.preventDefault();
+          $(this).serialize();
+          console.log($(this).serialize());
+          $.ajax({
+            url: "/tweets",
+            type: "POST",
+            data: $(this).serialize,
+            dataType: "string"
+          });
+        });
+      })
+    </script>
   </head>
 
   <body>
@@ -66,7 +83,10 @@
     </main>
     <footer class="page-footer">
     </footer>
+
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/hover.js"></script>
+
+
   </body>
 </html>
