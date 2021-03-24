@@ -7,7 +7,7 @@
 const data = [
   {
     "user": {
-      "name": "Newton",
+      "name": "Michael Scott",
       "avatars": "https://i.imgur.com/73hZDYK.png"
       ,
       "handle": "@SirIsaac"
@@ -24,26 +24,6 @@ const data = [
       "handle": "@rd" },
     "content": {
       "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  },
-  {
-    "user": {
-      "name": "Michael Scott",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@prisonmike" },
-    "content": {
-      "text": "You miss 100% of the shots you don't take."
-    },
-    "created_at": 1461113959088
-  },
-  {
-    "user": {
-      "name": "Jan Levinson",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@serenitybyjan" },
-    "content": {
-      "text": "You burn it, you buy it!"
     },
     "created_at": 1461113959088
   }
@@ -99,7 +79,26 @@ $( document ).ready(function() {
     console.log($tweet); // to see what it looks like
     $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
     // End of test / driver code
+
     return $tweet;
   }
-  renderTweets(data);
+
+    // GET tweets from DB
+    const loadTweets = () => {
+      $.ajax({
+        url: "/tweets",
+        type: "GET",
+        //data: data,
+        dataType: "JSON"
+      })
+      .then(res => {
+        renderTweets(res);
+      }) // data console log will need to be removed. 
+      /* .then(renderTweets(data), console.log("AJAX GET Successful", data,), console.log("RES")) // data console log will need to be removed.  */
+      .catch(err => console.log(err))
+    };
+    loadTweets();
+
+  // Commenting out since this is being called in the above .then
+  //renderTweets(data);
 });
