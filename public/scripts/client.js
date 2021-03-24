@@ -4,30 +4,30 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-  // Render Tweets
-  const renderTweets = function(tweets) {
-    // loops through tweets | calls createTweetElement for each tweet | takes return value and appends it to the tweets container
-    for (let tweet of tweets) {
-      let tweetData = {
-        newUserName: tweet.user.name,
-        newUserAvatar: tweet.user.avatars,
-        newUserHandle: tweet.user.handle,
-        tweetText: tweet.content.text,
-        dateStamp: tweet.created_at
-      }
-      createTweetElement(tweetData);
+// Render Tweets
+const renderTweets = function (tweets) {
+  // loops through tweets | calls createTweetElement for each tweet | takes return value and appends it to the tweets container
+  for (let tweet of tweets) {
+    let tweetData = {
+      newUserName: tweet.user.name,
+      newUserAvatar: tweet.user.avatars,
+      newUserHandle: tweet.user.handle,
+      tweetText: tweet.content.text,
+      dateStamp: tweet.created_at
     }
+    createTweetElement(tweetData);
   }
+}
 
-  // Create HTML elements for new tweets
-  const createTweetElement = function(tweetData) {  
-    const newUserName = tweetData.newUserName;
-    const newUserAvatar = tweetData.newUserAvatar;
-    const newUserHandle = tweetData.newUserHandle;
-    const tweetText = tweetData.tweetText;
-    const dateStamp = tweetData.dateStamp;
+// Create HTML elements for new tweets
+const createTweetElement = function (tweetData) {
+  const newUserName = tweetData.newUserName;
+  const newUserAvatar = tweetData.newUserAvatar;
+  const newUserHandle = tweetData.newUserHandle;
+  const tweetText = tweetData.tweetText;
+  const dateStamp = tweetData.dateStamp;
 
-    const $tweet = $(`<article>
+  const $tweet = $(`<article>
       <header class="tweets-header">
         <!-- User name and user icon -->
         <svg class="user-icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" class="svg-inline--fa fa-user fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg>
@@ -46,26 +46,27 @@
       </footer>
     </article>`);
 
-    // Test / driver code (temporary)
-    console.log($tweet); // to see what it looks like
-    $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-    // End of test / driver code
+  // Test / driver code (temporary)
+  console.log($tweet); // to see what it looks like
+  $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  // End of test / driver code
 
-    return $tweet;
-  }
+  return $tweet;
+}
 
-    // GET tweets from DB
-    const loadTweets = () => {
-      $.ajax({
-        url: "/tweets",
-        type: "GET",
-        //data: data,
-        dataType: "JSON"
-      })
-      .then(res => {
-        renderTweets(res);
-      }) // data console log will need to be removed. 
-      /* .then(renderTweets(data), console.log("AJAX GET Successful", data,), console.log("RES")) // data console log will need to be removed.  */
-      .catch(err => console.log(err))
-    };
-    loadTweets();
+// GET tweets from DB
+const loadTweets = () => {
+  $.ajax({
+    url: "/tweets",
+    type: "GET",
+    //data: data,
+    dataType: "JSON"
+  })
+    .then(res => {
+      let tweetsArr = res;
+      tweetsArr = tweetsArr.reverse();
+      renderTweets(tweetsArr);
+    })
+    .catch(err => console.log(err))
+};
+loadTweets();
