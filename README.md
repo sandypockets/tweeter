@@ -21,3 +21,6 @@ This repository is the starter code for the project: Students will fork and clon
 - Add caution icon to error messages
 - Sort tweets by date stamp, instead of just by most recently added to the array. 
 - Fix hover, to ensure username remains hidden unless hovering over that specific tweet. 
+- Update transparent image to something more appealing
+- Add icon to "Write new tweet"
+- Add functionality to jump down to the tweet form when clicking "Write new tweet"
