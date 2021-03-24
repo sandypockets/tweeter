@@ -29,16 +29,27 @@
         console.log("index.html document ready!");
         $( ".tweet-form" ).submit(function( event ) {
           event.preventDefault();
-          console.log($(this).serialize());
-          let serialized = $(this).serialize();
-          $.ajax({
-            url: "/tweets",
-            type: "POST",
-            data: serialized,
-            dataType: "string"
-          })
-          .then(console.log("AJAX Successful", data)) // data console log will need to be removed. 
-          .catch(err => console.log(err))
+          // Validate tweet length
+          let tweetCharCount = $("#tweet-text").val().length;
+          if (tweetCharCount <= 140 && tweetCharCount > 0) {
+            
+            console.log("37", tweetCharCount); // Debugging
+            console.log($(this).serialize()); // Debugging
+  
+            let serialized = $(this).serialize();
+            $.ajax({
+              url: "/tweets",
+              type: "POST",
+              data: serialized,
+              dataType: "string"
+            })
+            .then(console.log("AJAX Successful")) // data console log will need to be removed. 
+            .catch(err => console.log(err))
+          } else if (tweetCharCount <= 0) {
+            window.alert("Your tweet cannot be empty.");
+          } else if (tweetCharCount > 140) {
+            window.alert("Your tweet is too long.");
+          }
         });
       })
     </script>
