@@ -23,12 +23,14 @@
     
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    
     <script>
-      
-
       // Form Event Handler
       $(document).ready(function() {
         console.log("index.html document ready!");
+        $(".error-exceed-chars").hide()
+        $(".error-empty-tweet").hide()
+
         $( ".tweet-form" ).submit(function( event ) {
           event.preventDefault();
           // Validate tweet length
@@ -50,9 +52,13 @@
               loadTweets())
             .catch(err => console.log(err))
           } else if (tweetCharCount <= 0) {
-            window.alert("Your tweet cannot be empty.");
+            $(".error-empty-tweet").slideDown();
+            $(".error-empty-tweet").delay(3000);
+            $(".error-empty-tweet").slideUp();
           } else if (tweetCharCount > 140) {
-            window.alert("Your tweet is too long.");
+            $(".error-exceed-chars").slideDown();
+            $(".error-exceed-chars").delay(3000);
+            $(".error-exceed-chars").slideUp();
           }
         });
       })
@@ -91,7 +97,9 @@
               <output name="counter" class="counter" for="tweet-text">140</output>
             </div>
           </form>
-      </div>
+        </div>
+          <h3 class="error-exceed-chars">Your tweet is too long!</h3>
+          <h3 class="error-empty-tweet">You can't submit an empty tweet!</h3>
     </section>
       <!-- Tweets Feed -->
       <section id="tweets-container">
