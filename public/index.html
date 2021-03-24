@@ -24,6 +24,8 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script>
+      
+
       // Form Event Handler
       $(document).ready(function() {
         console.log("index.html document ready!");
@@ -43,7 +45,9 @@
               data: serialized,
               dataType: "string"
             })
-            .then(console.log("AJAX Successful")) // data console log will need to be removed. 
+            .then(
+              $('#tweets-container').empty(),
+              loadTweets())
             .catch(err => console.log(err))
           } else if (tweetCharCount <= 0) {
             window.alert("Your tweet cannot be empty.");
@@ -99,6 +103,7 @@
 
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/hover.js"></script>
+    
 
 
   </body>

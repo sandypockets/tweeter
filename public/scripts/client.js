@@ -30,8 +30,8 @@
 ] */
 
 // Document ready
-$( document ).ready(function() {
-  console.log( "client doc ready!" );
+/* $( document ).ready(function() {
+  console.log( "client doc ready!" ); */
 
   // Render Tweets
   const renderTweets = function(tweets) {
@@ -101,4 +101,4 @@ $( document ).ready(function() {
 
   // Commenting out since this is being called in the above .then
   //renderTweets(data);
-});
+/* }); */ // commented out document.ready
