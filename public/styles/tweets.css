@@ -9,7 +9,6 @@
 #tweets-container article {
   display: flex;
   flex-direction: column;
-  /* align-self: center; */
   width: 100%;
   margin: 20px;
 }
@@ -24,10 +23,6 @@
   justify-content: space-between;
 }
 
-/* .tewets-header p {
-  margin: 1.5em;
-} */
-
 main article p {
   display: flex;
   justify-content: space-around;
@@ -37,20 +32,6 @@ main article {
   border: 5px solid;
 }
 
-/* .tweets-header p {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-} */
-
-/* User icon from paragraph placeholder */
-/* .user-icon {
-  justify-content: flex-start;
-  margin: 1em;
-  width: auto;
-} */
-
-/* User icon with SVG */
 .user-icon {
   justify-content: flex-start;
   margin: 1em;
