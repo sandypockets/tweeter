@@ -2,6 +2,10 @@
 
 Tweeter is a simple, single-page (AJAX) Twitter clone. Built with HTML, CSS, and JavaScript.
 
+![alt](https://raw.githubusercontent.com/sandypockets/tweeter/master/docs/tweeter-top.png)
+
+![alt](https://raw.githubusercontent.com/sandypockets/tweeter/master/docs/tweeter-tweets.png)
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
