@@ -13,8 +13,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
+- [Express](https://www.npmjs.com/package/express)
+- [Node](https://nodejs.org/en/) 5.10.x or above (Project tested with `v12.21.0`)
 
 ## Project Roadmap
 
