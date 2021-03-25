@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    
-    <script>
-      
-      // Form Event Handler
-      $(document).ready(function() {
-        console.log("index.html document ready!");
-        
-        $(".error-exceed-chars").hide()
-        $(".error-empty-tweet").hide()
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+    rel="stylesheet">
 
-        $( ".tweet-form" ).submit(function( event ) {
-          event.preventDefault();
-          // Validate tweet length
-          let tweetCharCount = $("#tweet-text").val().length;
-          if (tweetCharCount <= 140 && tweetCharCount > 0) {
-            let serialized = $(this).serialize();
-            $.ajax({
-              url: "/tweets",
-              type: "POST",
-              data: serialized,
-              dataType: "string"
-            })
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script>
+    // Form Event Handler
+    $(document).ready(function () {
+      console.log("index.html document ready!");
+
+      $(".error-exceed-chars").hide()
+      $(".error-empty-tweet").hide()
+
+      $(".tweet-form").submit(function (event) {
+        event.preventDefault();
+        // Validate tweet length
+        let tweetCharCount = $("#tweet-text").val().length;
+        if (tweetCharCount <= 140 && tweetCharCount > 0) {
+          let serialized = $(this).serialize();
+          $.ajax({
+            url: "/tweets",
+            type: "POST",
+            data: serialized,
+            dataType: "string"
+          })
             .then(
               $('#tweets-container').empty(),
               loadTweets())
             .catch(err => console.log(err))
-          } else if (tweetCharCount <= 0) {
-            $(".error-empty-tweet").slideDown();
-            $(".error-empty-tweet").delay(3000);
-            $(".error-empty-tweet").slideUp();
-          } else if (tweetCharCount > 140) {
-            $(".error-exceed-chars").slideDown();
-            $(".error-exceed-chars").delay(3000);
-            $(".error-exceed-chars").slideUp();
-          }
-        });
-      })
-    </script>
-  </head>
+        } else if (tweetCharCount <= 0) {
+          $(".error-empty-tweet").slideDown();
+          $(".error-empty-tweet").delay(3000);
+          $(".error-empty-tweet").slideUp();
+        } else if (tweetCharCount > 140) {
+          $(".error-exceed-chars").slideDown();
+          $(".error-exceed-chars").delay(3000);
+          $(".error-exceed-chars").slideUp();
+        }
+      });
+    })
+  </script>
+</head>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav class="top-nav">
-      <span>tweeter</span>
-      <span class="new-tweet">Write a new tweet</span>
-    </nav>
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav class="top-nav">
+    <span>tweeter</span>
+    <span class="new-tweet">Write a new tweet</span>
+  </nav>
 
-    <!-- Header -->
+  <!-- Header -->
+  <div class="page-container">
     <header class="page-header">
       <div class="profile-image">
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png">
       </div>
       <br>
       <div class="profile-name">
-          <h2>Zac A</h2>
+        <h2>Zac A</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
@@ -88,7 +92,9 @@
         <!-- Submit new tweet form -->
         <div class="form-div">
           <form class="tweet-form" method="POST" action="/tweets">
-            <label for="tweet-text"><!-- What are you humming about? --></label>
+            <label for="tweet-text">
+              <!-- What are you humming about? -->
+            </label>
             <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
             <div>
               <button class="new-tweet-btn" type="submit">Tweet</button>
@@ -96,21 +102,23 @@
             </div>
           </form>
         </div>
-          <h3 class="error-exceed-chars">Your tweet is too long!</h3>
-          <h3 class="error-empty-tweet">You can't submit an empty tweet!</h3>
-    </section>
+        <h3 class="error-exceed-chars">Your tweet is too long!</h3>
+        <h3 class="error-empty-tweet">You can't submit an empty tweet!</h3>
+      </section>
       <!-- Tweets Feed -->
       <section id="tweets-container">
         <!-- Tweets dynamically inserted here -->
       </section>
     </main>
-    <footer class="page-footer">
-    </footer>
+  </div>
+  <footer class="page-footer">
+  </footer>
 
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    <script type="text/javascript" src="/scripts/hover.js"></script>
-    
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/hover.js"></script>
 
 
-  </body>
+
+</body>
+
 </html>

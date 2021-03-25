@@ -23,3 +23,23 @@
   justify-content: center;
   padding-bottom: 1.3em;
 }
+
+@media (max-width: 767px) {
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 140px;
+    height: 550px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .page-header {
+    display: flex;
+    max-width: 30%;
+    max-height: 13em;
+    margin-left: 0.5em;
+  }
+}
