@@ -27,6 +27,7 @@ main.container {
   width: 90%;
   margin: auto;
   background-color: #f4f1ec;
+  padding-right: 1.5em;
 }
 
 main p {
