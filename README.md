@@ -23,4 +23,4 @@ This repository is the starter code for the project: Students will fork and clon
 - Fix hover, to ensure username remains hidden unless hovering over that specific tweet. 
 - Update transparent image to something more appealing
 - Add icon to "Write new tweet"
-- Add functionality to jump down to the tweet form when clicking "Write new tweet"
+- ~~Add functionality to jump down to the tweet form when clicking "Write a new tweet"~~
