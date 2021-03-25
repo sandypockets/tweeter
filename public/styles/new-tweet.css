@@ -72,11 +72,6 @@ form div button {
   justify-content: center;  
   margin-left: auto;
   margin-right: auto;
-  /* border: medium solid red; */
-  /* border-bottom: 0px; */
-  /* border-left: 0px; */
-  /* border-right: 0px; */
-  /* border-top: 0px; */
 }
 
 .error-exceed-chars {
