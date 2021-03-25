@@ -29,8 +29,9 @@ Tweeter is a simple, single-page (AJAX) Twitter clone. Built with HTML, CSS, and
 ## Project Roadmap
 
 - Add caution icon to error messages
+- Display date time in more user friendly format
 - Sort tweets by date stamp, instead of just by most recently added to the array. 
-- Fix hover, to ensure username remains hidden unless hovering over that specific tweet. 
+- Adjust hover, to ensure username remains hidden unless hovering over that specific tweet. 
 - Update transparent image to something more appealing
 - Add icon to "Write new tweet"
 - ~~Add functionality to jump down to the tweet form when clicking "Write a new tweet"~~
