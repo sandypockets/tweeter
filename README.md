@@ -36,9 +36,9 @@ Tweeter is a simple, single-page (AJAX) Twitter clone. Built with HTML, CSS, and
 This project is not currently open to contributions, as it is a learning aid. However should contribution become an option in the future, please follow the steps below.
 
 1. Fork the Project
-2. Create your Feature Branch (git checkout -b feature/AmazingNewFeature)
-3. Commit your Changes (git commit -m 'Add some AmazingNewFeature')
-4. Push to the Branch (git push origin feature/AmazingNewFeature)
+2. Create your Feature Branch `git checkout -b feature/AmazingNewFeature`
+3. Commit your Changes `git commit -m 'Add some AmazingNewFeature'`
+4. Push to the Branch `git push origin feature/AmazingNewFeature`
 5. Open a Pull Request
 
 ## Acknowledgements
