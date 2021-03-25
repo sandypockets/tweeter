@@ -5,10 +5,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* background-color: #5f3dad; */
   background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
   background-color: #0062ad87;
-  /* background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png"); */
 }
 
 .profile-image {
