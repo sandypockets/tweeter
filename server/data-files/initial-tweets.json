@@ -8,7 +8,7 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1616269970556
+    "created_at": 1616098244618
   },
   {
     "user": {
@@ -19,6 +19,61 @@
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1616356370556
+    "created_at": 1616184644618
+  },
+  {
+    "user": {
+      "name": "Michael Scott",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@prisonmike"
+    },
+    "content": {
+      "text": "You miss 100% of the shots you don't take."
+    },
+    "created_at": 1616271044618
+  },
+  {
+    "user": {
+      "name": "Jan Levinson",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@serenitybyjan"
+    },
+    "content": {
+      "text": "You burn it, you buy it!"
+    },
+    "created_at": 1616357444618
+  },
+  {
+    "user": {
+      "name": "Kevin Malone",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@scrantonicity"
+    },
+    "content": {
+      "text": "The trick is to undercook the onions. Everybody is going to get to know eachother in the pot."
+    },
+    "created_at": 1616443844618
+  },
+  {
+    "user": {
+      "name": "Robert California",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@thelizardking"
+    },
+    "content": {
+      "text": "Do I look like someone who would waste my own time?"
+    },
+    "created_at": 1616530244618
+  },
+  {
+    "user": {
+      "name": "Gabe Lewis",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@gabelincoln"
+    },
+    "content": {
+      "text": "Shut up about the sun!"
+    },
+    "created_at": 1616616644618
   }
 ]
