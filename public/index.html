@@ -32,17 +32,26 @@
     // Form Event Handler
     $(document).ready(function () {
       console.log("index.html document ready!");
-
+      
       $('#write-new-tweet').on('click', function() {
         // Current 0 scroll position
-        const yAxis = $(window).scrollTop();
-        // Scrolls user down 80px to write new tweet  
-        $(window).scrollTop(yAxis+80);
+        const yAxis = $(document).scrollTop();
+        // Check doc width, and scroll to tweet form
+        if ($(document).width() > 1024) {
+          $(document).scrollTop(yAxis+300);
+        } else if ($(document).width() > 768) {
+          $(document).scrollTop(yAxis+80);
+        } else if ($(document).width() > 300) {
+          $(document).scrollTop(yAxis+330);
+        } // Scrolls back up if clicked again
+        if (yAxis > 0) {
+          $(document).scrollTop(0);
+        }
       });
 
       $(".error-exceed-chars").hide()
       $(".error-empty-tweet").hide()
-      
+
       $(".tweet-form").submit(function (event) {
         event.preventDefault();
         // Validate tweet length
