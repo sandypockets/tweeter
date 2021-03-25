@@ -33,9 +33,16 @@
     $(document).ready(function () {
       console.log("index.html document ready!");
 
+      $('#write-new-tweet').on('click', function() {
+        // Current 0 scroll position
+        const yAxis = $(window).scrollTop();
+        // Scrolls user down 80px to write new tweet  
+        $(window).scrollTop(yAxis+80);
+      });
+
       $(".error-exceed-chars").hide()
       $(".error-empty-tweet").hide()
-
+      
       $(".tweet-form").submit(function (event) {
         event.preventDefault();
         // Validate tweet length
@@ -70,7 +77,7 @@
   <!-- Top nav bar (fixed) -->
   <nav class="top-nav">
     <span>tweeter</span>
-    <span class="new-tweet">Write a new tweet</span>
+    <span id="write-new-tweet" class="new-tweet">Write a new tweet</span>
   </nav>
 
   <!-- Header -->
@@ -87,7 +94,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section id="write-new-tweet" class="new-tweet">
         <h2>Compose Tweet</h2>
         <!-- Submit new tweet form -->
         <div class="form-div">
