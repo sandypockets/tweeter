@@ -6,7 +6,8 @@
 
 // Render Tweets
 const renderTweets = function (tweets) {
-  // loops through tweets | calls createTweetElement for each tweet | takes return value and appends it to the tweets container
+  // loops through tweets => calls createTweetElement for each tweet
+  // then takes return value and appends it to the tweets container
   for (let tweet of tweets) {
     let tweetData = {
       newUserName: tweet.user.name,
@@ -46,11 +47,7 @@ const createTweetElement = function (tweetData) {
       </footer>
     </article>`);
 
-  // Test / driver code (temporary)
-  console.log($tweet); // to see what it looks like
-  $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-  // End of test / driver code
-
+  $('#tweets-container').append($tweet);
   return $tweet;
 }
 
