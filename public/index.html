@@ -25,9 +25,11 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
     
     <script>
+      
       // Form Event Handler
       $(document).ready(function() {
         console.log("index.html document ready!");
+        
         $(".error-exceed-chars").hide()
         $(".error-empty-tweet").hide()
 
@@ -36,10 +38,6 @@
           // Validate tweet length
           let tweetCharCount = $("#tweet-text").val().length;
           if (tweetCharCount <= 140 && tweetCharCount > 0) {
-            
-            console.log("37", tweetCharCount); // Debugging
-            console.log($(this).serialize()); // Debugging
-  
             let serialized = $(this).serialize();
             $.ajax({
               url: "/tweets",
