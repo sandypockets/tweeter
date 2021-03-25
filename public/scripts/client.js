@@ -56,7 +56,6 @@ const loadTweets = () => {
   $.ajax({
     url: "/tweets",
     type: "GET",
-    //data: data,
     dataType: "JSON"
   })
     .then(res => {
