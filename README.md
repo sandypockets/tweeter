@@ -1,8 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
-
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+Tweeter is a simple, single-page (AJAX) Twitter clone. Built with HTML, CSS, and JavaScript.
 
 ## Getting Started
 
@@ -13,8 +11,16 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Dependencies
 
-- [Express](https://www.npmjs.com/package/express)
-- [Node](https://nodejs.org/en/) 5.10.x or above (Project tested with `v12.21.0`)
+- [Express](https://www.npmjs.com/package/express) `^4.13.4`
+- [Node](https://nodejs.org/en/) 5.10.x or above (tested with `v12.21.0`)
+- [Body Parser](https://www.npmjs.com/package/body-parser) `^1.15.2`
+- [Chance](https://www.npmjs.com/package/chance) `^1.0.2`
+- [jQuery](https://www.npmjs.com/package/jquery) `^3.6.0`
+- [MD5](https://www.npmjs.com/package/md5) `^2.1.0`
+
+## Dev Dependencies
+
+- [Nodemon](https://www.npmjs.com/package/nodemon) `^1.9.2`
 
 ## Project Roadmap
 
@@ -24,3 +30,17 @@ This repository is the starter code for the project: Students will fork and clon
 - Update transparent image to something more appealing
 - Add icon to "Write new tweet"
 - ~~Add functionality to jump down to the tweet form when clicking "Write a new tweet"~~
+
+## Contributing
+
+This project is not currently open to contributions, as it is a learning aid. However should contribution become an option in the future, please follow the steps below.
+
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/AmazingNewFeature)
+3. Commit your Changes (git commit -m 'Add some AmazingNewFeature')
+4. Push to the Branch (git push origin feature/AmazingNewFeature)
+5. Open a Pull Request
+
+## Acknowledgements
+
+* [Lighthouse Labs](https://www.lighthouselabs.ca/)
