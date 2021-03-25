@@ -70,7 +70,9 @@
           })
             .then(
               $('#tweets-container').empty(),
-              loadTweets())
+              loadTweets(),
+              $("textarea").val("")
+              )
             .catch(err => console.log(err))
         } else if (tweetCharCount <= 0) {
           $(".error-empty-tweet").slideDown();
