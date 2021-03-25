@@ -1,6 +1,6 @@
 // Track num of characters remaining for new tweet
 $(document).ready(function() {
-  console.log( "ready!" );
+  console.log("ready!");
   $("#tweet-text").on('keyup', function() {
     // Count number of characters in input field
     const currentCount = $("#tweet-text").val().length;
@@ -11,5 +11,5 @@ $(document).ready(function() {
     } else {
       $(".counter").css("color", "black");
     }
-  })
+  });
 });

@@ -9,26 +9,25 @@ const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 // Render Tweets
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   // loops through tweets => calls createTweetElement for each tweet
   // then takes return value and appends it to the tweets container
   for (let tweet of tweets) {
     let tweetData = {
       newUserName: tweet.user.name,
-      newUserAvatar: tweet.user.avatars,
       newUserHandle: tweet.user.handle,
       tweetText: tweet.content.text,
       dateStamp: tweet.created_at
-    }
+    };
     createTweetElement(tweetData);
   }
-}
+};
 
 // Create HTML elements for new tweets
-const createTweetElement = function (tweetData) {
+const createTweetElement = function(tweetData) {
   const newUserName = tweetData.newUserName;
   const newUserAvatar = tweetData.newUserAvatar;
   const newUserHandle = tweetData.newUserHandle;
@@ -56,7 +55,7 @@ const createTweetElement = function (tweetData) {
 
   $('#tweets-container').append($tweet);
   return $tweet;
-}
+};
 
 // GET tweets from DB
 const loadTweets = () => {
@@ -70,6 +69,6 @@ const loadTweets = () => {
       tweetsArr = tweetsArr.reverse();
       renderTweets(tweetsArr);
     })
-    .catch(err => console.log(err))
+    .catch(err => console.log(err));
 };
 loadTweets();

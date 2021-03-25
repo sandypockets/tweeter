@@ -4,8 +4,9 @@
 $(document).ready(function() {
   $(".username").css("display", "none");
 
-    $("#tweets-container").hover(function() {
-      $(".username").css("display", "flex");
-    }, function() {
-      $(".username").css("display", "none")});
+  $("#tweets-container").hover(function() {
+    $(".username").css("display", "flex");
+  }, function() {
+    $(".username").css("display", "none");
+  });
 });
