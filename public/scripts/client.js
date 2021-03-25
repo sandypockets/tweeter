@@ -4,6 +4,13 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// Escape dangerous text
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 // Render Tweets
 const renderTweets = function (tweets) {
   // loops through tweets => calls createTweetElement for each tweet
@@ -35,7 +42,7 @@ const createTweetElement = function (tweetData) {
         <p class="name">${newUserName}</p>
         <p class="username">${newUserHandle}</p>
       </header>
-      <p class="tweet-body">${tweetText}</p>
+      <p class="tweet-body">${escape(tweetText)}</p>
       <footer class="tweets-footer">
         <p class="date-stamp">${dateStamp}</p>
         <!-- Adding tweet icons -->
